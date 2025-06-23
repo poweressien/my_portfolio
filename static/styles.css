@@ -1,0 +1,166 @@
+body {
+    background-color: #f0f8ff; /* Light blue background */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+h1 {
+    color: #1d6f7a; /* Orange-red heading */
+}
+h2 {
+    color: #1f8a1c; /* Dark gray for subheading */
+}
+p {
+    font-size: 18px;
+    color: #8f5c5f;
+}
+nav {
+    background-color: #d2aed3;
+    padding: 10px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 20px;
+}
+nav ul li a {
+    color: rgb(44, 79, 124);
+    text-decoration: none;
+    font-size: 16px;
+}
+nav ul li a:hover {
+    color: #ff4500;
+}
+button {
+    background-color: #c7c94e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+button:hover {
+    background-color: #e03e00;
+}
+.contact-container {
+    display: flex; /* Flexbox for side-by-side layout */
+    justify-content: center;
+    gap: 40px; /* Space between columns */
+    max-width: 900px; /* Limit width */
+    margin: 20px auto; /* Center container */
+    padding: 0 20px;
+}
+.form-section, .profile-section {
+    flex: 1; /* Equal width for both sections */
+    background-color: #4db113;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(180, 40, 40, 0.1);
+}
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #913269;
+}
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #9d4cd3;
+    border-radius: 4px;
+    font-size: 14px;
+}
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+img {
+    max-width: 150px; /* Limit image size */
+    border-radius: 8px;
+    margin: 10px 0;
+}
+.intro img, .about-container img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    margin: 10px auto;
+    display: block;
+}.messages-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #755c5c;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(107, 33, 33, 0.1);
+}
+.messages-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+.messages-container li {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #0c1031;
+}
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+.dark-mode h1, .dark-mode h2, .dark-mode p, .dark-mode label {
+    color: #fff;
+}
+.dark-mode nav {
+    background-color: #111;
+}
+.dark-mode .form-section, .dark-mode .profile-section, .dark-mode .about-container, 
+.dark-mode .portfolio-container, .dark-mode .project, .dark-mode .messages-container {
+    background-color: #333;
+}
+.dark-mode input, .dark-mode textarea {
+    background-color: #444;
+    color: #fff;
+    border-color: #555;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #327c57;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.dark-mode-toggle:hover {
+    background-color: #499ab9;
+}
+.project {
+    transition: transform 0.3s ease;
+}
+.project:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.project h3 {
+    color: #ff4500; /* Orange to match theme */
+    margin: 10px 0;
+}
+.dark-mode .project h3 {
+    color: #ff6347; /* Lighter orange for dark mode */
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Messages</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/messages">Messages</a></li>
+        </ul>
+    </nav>
+    <h1>Messages Received</h1>
+    <div class="messages-container">
+        <p>Total messages: {{ messages|length }}</p>
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            <form method="POST" action="/messages">
+                <button type="submit" name="clear" value="true">Clear Messages</button>
+            </form>
+        {% else %}
+            <p>No messages yet!</p>
+        {% endif %}
+    </div>
+</body>
+</html>

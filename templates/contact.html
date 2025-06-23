@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/messages">Messages</a></li>
+        </ul>
+    </nav>
+    <h1>Contact Me</h1>
+    <div class="contact-container">
+        <div class="form-section">
+            <p>Hit me up to talk coding!</p>
+            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <form id="contact-form" method="POST" action="/contact">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Your name"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Your email"><br>
+                <!-- Add these two lines below -->
+                <label for="subject">Subject:</label><br>
+                <input type="text" id="subject" name="subject" placeholder="Your subject"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" placeholder="Your message"></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="profile-section">
+            <h2>About Me</h2>
+            <img src="/static/images/profile.jpg" alt="Profile Image">
+            <p>Yo, I'm [YourName], learning to build sick websites and code in Python!</p>
+        </div>
+    </div>
+</body>
+</html>
+    <label for="subject">Subject:</label><br>
+<input type="text" id="subject" name="subject" placeholder="Your subject"><br>
+</body>
+</html>
