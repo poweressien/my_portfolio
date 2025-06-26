@@ -180,3 +180,22 @@ img {
 .dark-mode .game-container {
     background-color: #333;
 }
+.project h3 {
+    color: #ff4500; /* Orange to match theme */
+    margin: 10px 0;
+}
+.dark-mode .project h3 {
+    color: #ff6347; /* Lighter orange for dark mode */
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
