@@ -164,3 +164,19 @@ img {
 .dark-mode .project h3 {
     color: #ff6347; /* Lighter orange for dark mode */
 }
+.game-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.game-container input {
+    width: 100px;
+    padding: 8px;
+    margin: 10px 0;
+}
+.dark-mode .game-container {
+    background-color: #333;
+}

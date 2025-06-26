@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 import os
+import random
 
 app = Flask(__name__)
 
@@ -32,7 +33,6 @@ def projects():
 @app.route('/messages', methods=['GET', 'POST'])
 def messages():
     if request.method == 'POST' and request.form.get('clear') == 'true':
-        # Clear messages.txt
         with open('messages.txt', 'w') as f:
             f.write('')
         messages = []
@@ -44,6 +44,20 @@ def messages():
         except FileNotFoundError:
             messages = []
     return render_template('messages.html', messages=messages)
+
+@app.route('/game', methods=['GET', 'POST'])
+def game():
+    target = random.randint(1, 10)  # Random number for each session
+    feedback = ""
+    if request.method == 'POST':
+        guess = int(request.form['guess'])
+        if guess == target:
+            feedback = "Yo, you nailed it! New number generated."
+        elif guess < target:
+            feedback = "Too low! Try again."
+        else:
+            feedback = "Too high! Try again."
+    return render_template('game.html', feedback=feedback)
 
 if __name__ == '__main__':
     app.run(debug=True)
